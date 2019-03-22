@@ -1,4 +1,4 @@
-# Amplify Passwordless SMS Auth WebClient (Angular)
+# Amplify Passwordless SMS Auth - WebClient (Angular)
 
 This is a client web app that provides custom passwordless sign-up and sign-in pages to authenticate against an Amazon Cognito user pool via custom authentication challenge flow with Lambda triggers. 
 
