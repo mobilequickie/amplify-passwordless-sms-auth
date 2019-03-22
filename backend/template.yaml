@@ -1,0 +1,139 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Transform: AWS::Serverless-2016-10-31
+Description: >
+  Amplify passwordless SMS authentication backend using Amazon Cognito user pools custom auth challenge flow with AWS Lambda triggers and Amazon SNS for sending SMS
+
+Metadata:
+  AWS::ServerlessRepo::Application:
+    Name: amplify-passwordless-sms-auth 
+    Description: >
+      Amplify passwordless SMS authentication backend using Amazon Cognito user pools custom auth challenge flow with AWS Lambda triggers.
+    Author: Mobile Quickie
+    SpdxLicenseId: MIT
+    LicenseUrl: LICENSE
+    ReadmeUrl: README.md
+    Labels: ['passwordless', 'authentication', 'cognito', 'auth', 'sms', 'iOS', 'mobile', 'pinpoint', 'serverless', 'amplify']
+    HomepageUrl: https://github.com/mobilequickie/amplify-passwordless-sms-auth
+    SemanticVersion: 0.1.1
+    SourceCodeUrl: https://github.com/mobilequickie/amplify-passwordless-sms-auth
+
+Globals:
+  Function:
+    Timeout: 3
+
+Parameters:
+  UserPoolName:
+    Type: String
+    Description: The name you want the User Pool to be created with
+
+Resources:
+  DefineAuthChallenge:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: lambda-triggers/define-auth-challenge/
+      Handler: define-auth-challenge.handler
+      Runtime: nodejs8.10
+
+  CreateAuthChallenge:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: lambda-triggers/create-auth-challenge/
+      Handler: create-auth-challenge.handler
+      Runtime: nodejs8.10
+      Policies:
+        - Version: "2012-10-17"
+          Statement:
+            - Effect: Allow
+              Action:
+                - mobiletargeting:*
+                - sns:*
+              Resource: "*"
+
+  VerifyAuthChallengeResponse:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: lambda-triggers/verify-auth-challenge-response/
+      Handler: verify-auth-challenge-response.handler
+      Runtime: nodejs8.10
+
+  PreSignUp:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: lambda-triggers/pre-sign-up/
+      Handler: pre-sign-up.handler
+      Runtime: nodejs8.10
+
+  UserPool:
+    Type: "AWS::Cognito::UserPool"
+    Properties:
+      UserPoolName: !Ref UserPoolName
+      Schema:
+        - Name: name
+          AttributeDataType: String
+          Mutable: true
+          Required: true
+        - Name: phone_number
+          AttributeDataType: String
+          Mutable: true
+          Required: true
+      Policies:
+        PasswordPolicy:
+          MinimumLength: 6
+          RequireLowercase: false
+          RequireNumbers: false
+          RequireSymbols: false
+          RequireUppercase: false
+      UsernameAttributes:
+        - phone_number
+      MfaConfiguration: "OFF"
+      LambdaConfig:
+        CreateAuthChallenge: !GetAtt CreateAuthChallenge.Arn
+        DefineAuthChallenge: !GetAtt DefineAuthChallenge.Arn
+        PreSignUp: !GetAtt PreSignUp.Arn
+        VerifyAuthChallengeResponse: !GetAtt VerifyAuthChallengeResponse.Arn
+
+  DefineAuthChallengeInvocationPermission:
+    Type: AWS::Lambda::Permission
+    Properties:
+      Action: lambda:InvokeFunction
+      FunctionName: !GetAtt DefineAuthChallenge.Arn
+      Principal: cognito-idp.amazonaws.com
+      SourceArn: !GetAtt UserPool.Arn
+  CreateAuthChallengeInvocationPermission:
+    Type: AWS::Lambda::Permission
+    Properties:
+      Action: lambda:InvokeFunction
+      FunctionName: !GetAtt CreateAuthChallenge.Arn
+      Principal: cognito-idp.amazonaws.com
+      SourceArn: !GetAtt UserPool.Arn
+  VerifyAuthChallengeResponseInvocationPermission:
+    Type: AWS::Lambda::Permission
+    Properties:
+      Action: lambda:InvokeFunction
+      FunctionName: !GetAtt VerifyAuthChallengeResponse.Arn
+      Principal: cognito-idp.amazonaws.com
+      SourceArn: !GetAtt UserPool.Arn
+  PreSignUpInvocationPermission:
+    Type: AWS::Lambda::Permission
+    Properties:
+      Action: lambda:InvokeFunction
+      FunctionName: !GetAtt PreSignUp.Arn
+      Principal: cognito-idp.amazonaws.com
+      SourceArn: !GetAtt UserPool.Arn
+
+  UserPoolClient:
+    Type: "AWS::Cognito::UserPoolClient"
+    Properties:
+      ClientName: sms-auth-client
+      GenerateSecret: false
+      UserPoolId: !Ref UserPool
+      ExplicitAuthFlows:
+        - CUSTOM_AUTH_FLOW_ONLY
+
+Outputs:
+  UserPoolId:
+    Description: ID of the User Pool
+    Value: !Ref UserPool
+  UserPoolClientId:
+    Description: ID of the User Pool Client
+    Value: !Ref UserPoolClient
