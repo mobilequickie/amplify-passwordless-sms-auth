@@ -17,23 +17,24 @@ Here's what the [/backend](https://github.com/mobilequickie/amplify-passwordless
 - Four(4) Lambda functions running Node.js (v8.10) that serve as User Pool triggers to complete the custom authentication challenge auth flow
 - Permissions for the Lambda function triggers to be invoked by your Cognito user pool.
 
-An example iOS client app that is ready to run against this Serverless Application can be found at [iOS Mobile Client](https://github.com/mobilequickie/amplify-passwordless-sms-auth/tree/master/iOSClient)
+If you are interested in [passwordless email authentication](https://github.com/aws-samples/amazon-cognito-passwordless-email-auth/tree/master/cognito)
 
 ## Backend Deployment instructions
 
-Deploy the backend through the Serverless Application Repository. 
+Deploy the backend through the Serverless Application Repository as outlined in [/backend](https://github.com/mobilequickie/amplify-passwordless-sms-auth/tree/master/backend). 
 
-#### Part I ###
-1. Log into the AWS Lambda Console
+#### Backend ###
+1. Log into the [AWS Lambda Console](https://console.aws.amazon.com/lambda/home?region=us-east-1#/functions)
 2. Select create new function
-3. Find the Serverless Application in the [Serverless Application Repository](https://console.aws.amazon.com/serverlessrepo/) using tags "passwordless" and "sms" or navigate to it directly [Amplify Passwordless SMS Authentication](https://serverlessrepo.aws.amazon.com/applications/arn:aws:serverlessrepo:us-east-1:552623489034:applications~amplify-passwordless-sms-auth).
+3. Find the Serverless Application in the [Serverless Application Repository](https://console.aws.amazon.com/serverlessrepo/) using tags "passwordless" and "sms" or navigate directly to [Amplify Passwordless SMS Authentication](https://serverlessrepo.aws.amazon.com/applications/arn:aws:serverlessrepo:us-east-1:552623489034:applications~amplify-passwordless-sms-auth).
 
-Once you deploy this backend configuration. Setup the provided web client (Angular) or iOS app to demonstrate sign-up and sign-in of users, using only their phone number. 
+Once you deploy this backend via the Serverless Application Repository, you can setup the provided web client (Angular) or iOS app to demonstrate sign-up and sign-in of users, using only their phone number. 
+
+#### Clients ####
 
 [Web Client (Angular)](https://github.com/mobilequickie/amplify-passwordless-sms-auth/tree/master/webClient/angular)
 
 [iOS Client](https://github.com/mobilequickie/amplify-passwordless-sms-auth/tree/master/iOSClient)
-
 
 ### License Summary
 

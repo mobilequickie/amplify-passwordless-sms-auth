@@ -1,8 +1,7 @@
 # Amplify Passwordless SMS Auth WebClient (Angular)
 
-This is a client web app that provides custom passwordless sign-up and sign-in pages to authenticate against an Amazon Cognito user pool via custom authentication challenge flow with Lambda triggers. This solution is deployed via the Serverless Application Repository as outlined in [/backend](https://github.com/dennisAWS/amplify-passwordless-sms-auth/tree/master/backend) instructions.
+This is a client web app that provides custom passwordless sign-up and sign-in pages to authenticate against an Amazon Cognito user pool via custom authentication challenge flow with Lambda triggers. 
 
-If you are interested in [passwordless email authentication](https://github.com/aws-samples/amazon-cognito-passwordless-email-auth/tree/master/cognito)
 ## How to run this web app
 
 ### Pre-requisites to run this Angular web client
