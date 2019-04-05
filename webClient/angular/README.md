@@ -25,6 +25,8 @@ Once you have it running locally and tested, you can deploy this  directly to AW
 
 [![amplifybutton](https://oneclick.amplifyapp.com/button.svg)](https://console.aws.amazon.com/amplify/home#/deploy?repo=https://github.com/mobilequickie/amplify-passwordless-sms-auth)
 
+![Screenshot](one-click-amplify-console.gif)
+
 ### License Summary
 
 This sample code is made available under a modified MIT license. See the LICENSE file.
