@@ -21,6 +21,10 @@ Once the backend is deployed, run the web client to demonstrate the passwordless
 
 The web app client should be running at http://localhost:4200 allowing you to register a new user with full name and phone number and login with only the registered phone number.
 
+Once you have it running locally and tested, you can deploy this  directly to AWS Amplify Console:
+
+[![amplifybutton](https://oneclick.amplifyapp.com/button.svg)](https://console.aws.amazon.com/amplify/home#/deploy?repo=https://github.com/mobilequickie/amplify-passwordless-sms-auth)
+
 ### License Summary
 
 This sample code is made available under a modified MIT license. See the LICENSE file.
