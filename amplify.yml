@@ -1,0 +1,17 @@
+version: 0.1
+frontend:
+  phases:
+    preBuild:
+      commands:
+        - cd webClient/angular
+        - npm ci
+    build:
+      commands:
+        - npm run build
+  artifacts:
+    baseDirectory: webClient/angular/dist/amplify-passwordless-sms-auth-client
+    files:
+      - '**/*'
+  cache:
+    paths:
+      - node_modules/**/*
