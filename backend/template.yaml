@@ -1,20 +1,20 @@
 AWSTemplateFormatVersion: "2010-09-09"
 Transform: AWS::Serverless-2016-10-31
 Description: >
-  Amplify passwordless SMS authentication backend using Amazon Cognito user pools custom auth challenge flow with AWS Lambda triggers and Amazon SNS for sending SMS
+  Passwordless SMS authentication backend using Amazon Cognito User Pools CUSTOM AUTH challenge flow w/ AWS Lambda triggers and Amazon SNS for sending SMS TOTP
 
 Metadata:
   AWS::ServerlessRepo::Application:
     Name: amplify-passwordless-sms-auth 
     Description: >
-      Amplify passwordless SMS authentication backend using Amazon Cognito user pools custom auth challenge flow with AWS Lambda triggers.
+      Passwordless SMS authentication backend using Amazon Cognito User Pools CUSTOM AUTH challenge flow w/ AWS Lambda triggers and Amazon SNS for sending SMS TOTP
     Author: Mobile Quickie
     SpdxLicenseId: MIT
     LicenseUrl: LICENSE
     ReadmeUrl: README.md
     Labels: ['passwordless', 'authentication', 'cognito', 'auth', 'sms', 'iOS', 'mobile', 'pinpoint', 'serverless', 'amplify']
     HomepageUrl: https://github.com/mobilequickie/amplify-passwordless-sms-auth
-    SemanticVersion: 0.1.1
+    SemanticVersion: 1.14.20
     SourceCodeUrl: https://github.com/mobilequickie/amplify-passwordless-sms-auth
 
 Globals:
@@ -32,14 +32,14 @@ Resources:
     Properties:
       CodeUri: lambda-triggers/define-auth-challenge/
       Handler: define-auth-challenge.handler
-      Runtime: nodejs8.10
+      Runtime: nodejs12.x
 
   CreateAuthChallenge:
     Type: AWS::Serverless::Function
     Properties:
       CodeUri: lambda-triggers/create-auth-challenge/
       Handler: create-auth-challenge.handler
-      Runtime: nodejs8.10
+      Runtime: nodejs12.x
       Policies:
         - Version: "2012-10-17"
           Statement:
@@ -54,14 +54,14 @@ Resources:
     Properties:
       CodeUri: lambda-triggers/verify-auth-challenge-response/
       Handler: verify-auth-challenge-response.handler
-      Runtime: nodejs8.10
+      Runtime: nodejs12.x
 
   PreSignUp:
     Type: AWS::Serverless::Function
     Properties:
       CodeUri: lambda-triggers/pre-sign-up/
       Handler: pre-sign-up.handler
-      Runtime: nodejs8.10
+      Runtime: nodejs12.x
 
   UserPool:
     Type: "AWS::Cognito::UserPool"
