@@ -1,0 +1,425 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		12DCC223C559BA7007ED2151 /* Pods_CustomAuth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7513489433AF32054565EC6E /* Pods_CustomAuth.framework */; };
+		267900EA23984C9F00B90ECD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267900E923984C9F00B90ECD /* AppDelegate.swift */; };
+		267900EC23984C9F00B90ECD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267900EB23984C9F00B90ECD /* SceneDelegate.swift */; };
+		267900EE23984C9F00B90ECD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267900ED23984C9F00B90ECD /* ViewController.swift */; };
+		267900F123984C9F00B90ECD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 267900EF23984C9F00B90ECD /* Main.storyboard */; };
+		267900F323984CA100B90ECD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 267900F223984CA100B90ECD /* Assets.xcassets */; };
+		267900F623984CA100B90ECD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 267900F423984CA100B90ECD /* LaunchScreen.storyboard */; };
+		267900FE23984CE000B90ECD /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 267900FD23984CE000B90ECD /* awsconfiguration.json */; };
+		26D53B7823A6155D00AA6230 /* PassCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D53B7723A6155D00AA6230 /* PassCodeView.swift */; };
+		26D53B7A23A618CD00AA6230 /* PassCodeViewConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D53B7923A618CD00AA6230 /* PassCodeViewConstraints.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		267900E623984C9F00B90ECD /* CustomAuth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomAuth.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		267900E923984C9F00B90ECD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		267900EB23984C9F00B90ECD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		267900ED23984C9F00B90ECD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		267900F023984C9F00B90ECD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		267900F223984CA100B90ECD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		267900F523984CA100B90ECD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		267900F723984CA100B90ECD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		267900FD23984CE000B90ECD /* awsconfiguration.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = awsconfiguration.json; sourceTree = "<group>"; };
+		26D53B7723A6155D00AA6230 /* PassCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassCodeView.swift; sourceTree = "<group>"; };
+		26D53B7923A618CD00AA6230 /* PassCodeViewConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassCodeViewConstraints.swift; sourceTree = "<group>"; };
+		60DB034AEE7008836BA6F516 /* Pods-CustomAuth.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CustomAuth.debug.xcconfig"; path = "Target Support Files/Pods-CustomAuth/Pods-CustomAuth.debug.xcconfig"; sourceTree = "<group>"; };
+		7513489433AF32054565EC6E /* Pods_CustomAuth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CustomAuth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A4B7283912F33A11A6908D9 /* Pods-CustomAuth.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CustomAuth.release.xcconfig"; path = "Target Support Files/Pods-CustomAuth/Pods-CustomAuth.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		267900E323984C9F00B90ECD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				12DCC223C559BA7007ED2151 /* Pods_CustomAuth.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		267900DD23984C9F00B90ECD = {
+			isa = PBXGroup;
+			children = (
+				267900FD23984CE000B90ECD /* awsconfiguration.json */,
+				267900E823984C9F00B90ECD /* CustomAuth */,
+				267900E723984C9F00B90ECD /* Products */,
+				C051C65FEC86F3488316768F /* Pods */,
+				40B53EA3ED2216AC38F194D6 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		267900E723984C9F00B90ECD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				267900E623984C9F00B90ECD /* CustomAuth.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		267900E823984C9F00B90ECD /* CustomAuth */ = {
+			isa = PBXGroup;
+			children = (
+				267900E923984C9F00B90ECD /* AppDelegate.swift */,
+				267900EB23984C9F00B90ECD /* SceneDelegate.swift */,
+				267900ED23984C9F00B90ECD /* ViewController.swift */,
+				267900EF23984C9F00B90ECD /* Main.storyboard */,
+				267900F223984CA100B90ECD /* Assets.xcassets */,
+				267900F423984CA100B90ECD /* LaunchScreen.storyboard */,
+				267900F723984CA100B90ECD /* Info.plist */,
+				26D53B7723A6155D00AA6230 /* PassCodeView.swift */,
+				26D53B7923A618CD00AA6230 /* PassCodeViewConstraints.swift */,
+			);
+			path = CustomAuth;
+			sourceTree = "<group>";
+		};
+		40B53EA3ED2216AC38F194D6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7513489433AF32054565EC6E /* Pods_CustomAuth.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C051C65FEC86F3488316768F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				60DB034AEE7008836BA6F516 /* Pods-CustomAuth.debug.xcconfig */,
+				9A4B7283912F33A11A6908D9 /* Pods-CustomAuth.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		267900E523984C9F00B90ECD /* CustomAuth */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 267900FA23984CA100B90ECD /* Build configuration list for PBXNativeTarget "CustomAuth" */;
+			buildPhases = (
+				2CCD3A6DEAAB4DA6CCF37B9C /* [CP] Check Pods Manifest.lock */,
+				267900E223984C9F00B90ECD /* Sources */,
+				267900E323984C9F00B90ECD /* Frameworks */,
+				267900E423984C9F00B90ECD /* Resources */,
+				A4E92C4FE7788F395222E336 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CustomAuth;
+			productName = CustomAuth;
+			productReference = 267900E623984C9F00B90ECD /* CustomAuth.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		267900DE23984C9F00B90ECD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1120;
+				LastUpgradeCheck = 1120;
+				ORGANIZATIONNAME = "Dennis Hills";
+				TargetAttributes = {
+					267900E523984C9F00B90ECD = {
+						CreatedOnToolsVersion = 11.2.1;
+					};
+				};
+			};
+			buildConfigurationList = 267900E123984C9F00B90ECD /* Build configuration list for PBXProject "CustomAuth" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 267900DD23984C9F00B90ECD;
+			productRefGroup = 267900E723984C9F00B90ECD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				267900E523984C9F00B90ECD /* CustomAuth */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		267900E423984C9F00B90ECD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				267900FE23984CE000B90ECD /* awsconfiguration.json in Resources */,
+				267900F623984CA100B90ECD /* LaunchScreen.storyboard in Resources */,
+				267900F323984CA100B90ECD /* Assets.xcassets in Resources */,
+				267900F123984C9F00B90ECD /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2CCD3A6DEAAB4DA6CCF37B9C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CustomAuth-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A4E92C4FE7788F395222E336 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CustomAuth/Pods-CustomAuth-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CustomAuth/Pods-CustomAuth-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CustomAuth/Pods-CustomAuth-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		267900E223984C9F00B90ECD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				267900EE23984C9F00B90ECD /* ViewController.swift in Sources */,
+				26D53B7A23A618CD00AA6230 /* PassCodeViewConstraints.swift in Sources */,
+				267900EA23984C9F00B90ECD /* AppDelegate.swift in Sources */,
+				26D53B7823A6155D00AA6230 /* PassCodeView.swift in Sources */,
+				267900EC23984C9F00B90ECD /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		267900EF23984C9F00B90ECD /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				267900F023984C9F00B90ECD /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		267900F423984CA100B90ECD /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				267900F523984CA100B90ECD /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		267900F823984CA100B90ECD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		267900F923984CA100B90ECD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		267900FB23984CA100B90ECD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 60DB034AEE7008836BA6F516 /* Pods-CustomAuth.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FC263886LH;
+				INFOPLIST_FILE = CustomAuth/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.yubikit.CustomAuth;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		267900FC23984CA100B90ECD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9A4B7283912F33A11A6908D9 /* Pods-CustomAuth.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FC263886LH;
+				INFOPLIST_FILE = CustomAuth/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.yubikit.CustomAuth;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		267900E123984C9F00B90ECD /* Build configuration list for PBXProject "CustomAuth" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				267900F823984CA100B90ECD /* Debug */,
+				267900F923984CA100B90ECD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		267900FA23984CA100B90ECD /* Build configuration list for PBXNativeTarget "CustomAuth" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				267900FB23984CA100B90ECD /* Debug */,
+				267900FC23984CA100B90ECD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 267900DE23984C9F00B90ECD /* Project object */;
+}

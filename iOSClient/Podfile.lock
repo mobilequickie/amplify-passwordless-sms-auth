@@ -1,0 +1,46 @@
+PODS:
+  - AWSAuthCore (2.12.2):
+    - AWSCore (= 2.12.2)
+  - AWSCognitoIdentityProvider (2.12.2):
+    - AWSCognitoIdentityProviderASF (= 1.0.1)
+    - AWSCore (= 2.12.2)
+  - AWSCognitoIdentityProviderASF (1.0.1)
+  - AWSCore (2.12.2)
+  - AWSMobileClient (2.12.2):
+    - AWSAuthCore (= 2.12.2)
+    - AWSCognitoIdentityProvider (= 2.12.2)
+  - PhoneNumberKit (3.1.0):
+    - PhoneNumberKit/PhoneNumberKitCore (= 3.1.0)
+    - PhoneNumberKit/UIKit (= 3.1.0)
+  - PhoneNumberKit/PhoneNumberKitCore (3.1.0)
+  - PhoneNumberKit/UIKit (3.1.0):
+    - PhoneNumberKit/PhoneNumberKitCore
+  - Toast-Swift (5.0.0)
+
+DEPENDENCIES:
+  - AWSMobileClient (~> 2.12.0)
+  - PhoneNumberKit (~> 3.1)
+  - Toast-Swift (~> 5.0.0)
+
+SPEC REPOS:
+  trunk:
+    - AWSAuthCore
+    - AWSCognitoIdentityProvider
+    - AWSCognitoIdentityProviderASF
+    - AWSCore
+    - AWSMobileClient
+    - PhoneNumberKit
+    - Toast-Swift
+
+SPEC CHECKSUMS:
+  AWSAuthCore: a67ecbfe4dfdb8470f85c31f9594476d5ed988a5
+  AWSCognitoIdentityProvider: 5ac7b7af7877e7a47585c08d6a0ef58bcd6314b6
+  AWSCognitoIdentityProviderASF: f94f1a502e72ef3d0a1de93e10bf7a79c8698118
+  AWSCore: bdc0933bcb1aca4a9af3352a9e6ec75b339faf71
+  AWSMobileClient: ed6cd3c6ecb935406bf392df81fc5b40f4660845
+  PhoneNumberKit: adffe4e128af1918386e09e7421d3d851a2987af
+  Toast-Swift: 36f4720243c8582c2be243a60a51e193c761f541
+
+PODFILE CHECKSUM: 981e82cdbf0ded8a631cab03b7948e344b6ebd98
+
+COCOAPODS: 1.8.4
