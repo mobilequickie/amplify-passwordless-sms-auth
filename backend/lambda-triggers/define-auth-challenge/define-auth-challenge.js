@@ -8,14 +8,14 @@
 // For HOTP, TOTP, U2F, or WebAuthn flows, we'll always use 'CUSTOM_CHALLENGE' and this function code won't change between the various auth methods.
 
 // ### Next steps ###
-// Updated: Jan 6, 2020
+// Updated: June 12, 2020
 
 'use strict';
 
 exports.handler = async (event) => {
     console.log('RECEIVED event: ', JSON.stringify(event, null, 2));
     
-    // The first auth request for CUSTOM_CHALLENGE from the AWSMobileClient (in iOS native app) actually comes in as an "SRP_A" challenge (BUG in AWS iOS SDK), so swicth to CUSTOM_CHALLENGE and clear session.
+    // The first auth request for CUSTOM_CHALLENGE from the AWSMobileClient (in iOS native app) actually comes in as an "SRP_A" challenge (BUG in AWS iOS SDK), so switch to CUSTOM_CHALLENGE and clear session.
     if (event.request.session && event.request.session.length && event.request.session.slice(-1)[0].challengeName == "SRP_A") {
         console.log('New CUSTOM_CHALLENGE', JSON.stringify(event, null, 2));
         event.request.session = []; 
@@ -26,6 +26,7 @@ exports.handler = async (event) => {
     // User successfully answered the challenge, succeed with auth and issue OpenID tokens
     else if (event.request.session &&
         event.request.session.length &&
+        event.request.session.slice(-1)[0].challengeName === 'CUSTOM_CHALLENGE' &&
         event.request.session.slice(-1)[0].challengeResult === true) {
         
         console.log('The user provided the right answer to the challenge; succeed auth');
