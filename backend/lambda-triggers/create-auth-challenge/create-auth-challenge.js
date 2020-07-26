@@ -49,6 +49,8 @@ exports.handler = async (event = {}) => {
 
 // Send secret code over SMS via Amazon Simple Notification Service (SNS)
 async function sendSMSviaSNS(phoneNumber, passCode) {
-    const params = { "Message": "[MobileQuickie] Your secret code: " + passCode, "PhoneNumber": phoneNumber };
+   // const params = { "Message": "[MobileQuickie] Your secret code: " + passCode, "PhoneNumber": phoneNumber };
+    //SNS not sending transaction message by default and OTP should be transnational message
+    const params = { "Message": "[MobileQuickie] Your secret code: " + passCode, "PhoneNumber": phoneNumber,MessageAttributes: {'AWS.SNS.SMS.SMSType': {DataType: 'String',StringValue: 'Transactional' }}};
     await sns.publish(params).promise();
 }
