@@ -107,8 +107,23 @@ class ViewController: UIViewController {
         }
     }
     
-    func signUp() {
-        // TODO - Do we need signup for passwordless SMS? Probably if you want to capture a display name or user's real name
+    func signUp(phoneNumber: String) {
+        AWSMobileClient.default().signUp(username: phoneNumber, password: UUID().uuidString, userAttributes: [
+            "name": phoneNumber
+        ]) { (result, error) in
+            if let error = error {
+                dump(error)
+                DispatchQueue.main.async {
+                    self.view.makeToast(error.localizedDescription, duration: 3.0, position: .top)
+                }
+                return
+            }
+
+            guard let result = result else { return }
+
+            self.signIn(phoneNumber: phoneNumber)
+        }
+
     }
     
     // This is the default signIn for an existing user with Phone Number as their official Cognito "Username".
@@ -130,7 +145,7 @@ class ViewController: UIViewController {
                 if let error = error as? AWSMobileClientError { 
                     switch(error) {
                     case .userNotFound(let message):
-                        displayErrorMsg = message
+                        self.signUp(phoneNumber: phoneNumber)
                     case .badRequest(let message):
                         displayErrorMsg = message
                     default:
