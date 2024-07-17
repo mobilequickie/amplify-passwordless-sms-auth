@@ -32,14 +32,14 @@ Resources:
     Properties:
       CodeUri: lambda-triggers/define-auth-challenge/
       Handler: define-auth-challenge.handler
-      Runtime: nodejs12.x
+      Runtime: nodejs18.x
 
   CreateAuthChallenge:
     Type: AWS::Serverless::Function
     Properties:
       CodeUri: lambda-triggers/create-auth-challenge/
       Handler: create-auth-challenge.handler
-      Runtime: nodejs12.x
+      Runtime: nodejs18.x
       Policies:
         - Version: "2012-10-17"
           Statement:
@@ -54,14 +54,14 @@ Resources:
     Properties:
       CodeUri: lambda-triggers/verify-auth-challenge-response/
       Handler: verify-auth-challenge-response.handler
-      Runtime: nodejs12.x
+      Runtime: nodejs18.x
 
   PreSignUp:
     Type: AWS::Serverless::Function
     Properties:
       CodeUri: lambda-triggers/pre-sign-up/
       Handler: pre-sign-up.handler
-      Runtime: nodejs12.x
+      Runtime: nodejs18.x
 
   UserPool:
     Type: "AWS::Cognito::UserPool"
